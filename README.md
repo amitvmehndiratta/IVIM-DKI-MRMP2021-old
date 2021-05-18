@@ -46,7 +46,9 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
 -'im2Y.m':Transforms functional image data (4D or 3D array) into data matrix.
 -'monoexplog.m': Function which contains monoexponential model equation.
 -'tv3d.m':Function which contains 3D TV.
+
 Please see ref. [1] for more details on the implementation of TV function.
+
 Acknowledgement: https://github.com/oliverchampion/IVIM_tools
 
 **Note: IVIM_DKI_functions folder must be setpath before execution of 'main_program.m'.**
