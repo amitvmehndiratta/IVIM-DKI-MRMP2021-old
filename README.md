@@ -38,12 +38,10 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
 -'allivimdki.m': Function which contains IVIM-DKI model equation.
 -'hybrid_TVmodel.m': Executes IVIM-DKI model with TV code using [non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520).
 -'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m). 
--'im2Y.m':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
+-'[im2Y.m](https://github.com/oliverchampion/IVIM_tools)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
 -'monoexplog.m': Function which contains monoexponential model equation.
 -'tv3d.m':Function which calculates 3D TV penalty.
 
 Please see ref. [1] for more details on the implementation of TV function.
-
-Acknowledgement: https://github.com/oliverchampion/IVIM_tools
 
 **Note: Please execute 'main_program.m' in IVIM_DKI_functions folder.**
