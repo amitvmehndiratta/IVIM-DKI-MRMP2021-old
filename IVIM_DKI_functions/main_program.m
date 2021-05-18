@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Read patient data
 % Select ivim file
-[dwi_file,path]=uigetfile('ivim13b.nii.gz');
+[dwi_file,path]=uigetfile('*.nii.gz','Select IVIM-DKI image file');
 if isequal(dwi_file,0)
    disp('User selected Cancel');
 else
@@ -16,7 +16,7 @@ allslice=double(allslice.img); %double the image for further easy processing
 allslice3=imrotate(allslice,90);
 
 % Select tumor file
-[tumor_file,path]=uigetfile('tumor.nii.gz');
+[tumor_file,path]=uigetfile('*.nii.gz','Select tumor ROI file');
 if isequal(tumor_file,0)
    disp('User selected Cancel');
 else
@@ -27,7 +27,7 @@ tumor=double(tumor.img); %double the image for further easy processing
 tumor1=logical(imrotate(tumor,90));
 
 % Select bph file
-[bph_file,path]=uigetfile('bph.nii.gz');
+[bph_file,path]=uigetfile('*.nii.gz','Select BPH ROI file');
 if isequal(bph_file,0)
    disp('User selected Cancel');
 else
@@ -38,7 +38,7 @@ bph=double(bph.img); %double the image for further easy processing
 bph1=logical(imrotate(bph,90));
 
 % Select pz file
-[pz_file,path]=uigetfile('pz.nii.gz');
+[pz_file,path]=uigetfile('*.nii.gz','Select PZ ROI file');
 if isequal(pz_file,0)
    disp('User selected Cancel');
 else
