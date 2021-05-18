@@ -63,6 +63,5 @@ iter=10;
 %% Codes to run
 hybridmodel
 hybrid_TVmodel
-aic_aicccal
 %% Save workspace
 save (strcat(path,'allmodel_results.mat'))
