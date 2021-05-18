@@ -33,6 +33,7 @@ https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_data/IV
 
 2. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
 traditional IVIM-DKI and novel IVIM-DKI model with TV. 
+
 1. 'AIC.m': Calculates Akaike information criterion (AIC) and AIC corrected (AICc).
 2. 'aic_aicccal.m': Calculates AIC/AICc for tumor, BPH and healthy PZ ROIs from ['AIC.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/AIC.m).
 3. 'allivimdki.m': Function which contains IVIM-DKI model equation.
