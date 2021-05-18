@@ -28,7 +28,7 @@ not liable for any clinical use of it, authors could not be held responsible.**
 
 ### This package consists of two folders:
 
-[1] **'IVIM_DKI_data'**: The folder consists of IVIM-DKI 4D data with tumor, BPH, 
+1. **'IVIM_DKI_data'**: The folder consists of IVIM-DKI 4D data with tumor, BPH, 
 and healthy PZ masks. All the images and ROIs are in compressed nii format and to 
 read the images either 'niftiread' function (Matlab R2017b and later) or 
 'load_untouch_niigz' function from
