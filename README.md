@@ -20,32 +20,27 @@ E-mail: <amehndiratta@cbme.iitd.ac.in>, <amit.mehndiratta@keble.oxon.org>.
 - If you have any queries or suggestions about this package, 
     please do not hesitate to contact us.
 ---------------------------------------------------------------------------------
-**Disclaimer:** This project can be used only for research purposes. Authors are 
-not liable for any clinical use of it, authors could not be held responsible.
+Disclaimer: This project can be used only for research purposes. Authors are not liable for any clinical use of it, authors could not be held responsible.
 ---------------------------------------------------------------------------------
 - Version 1.0: May 2021
 ---------------------------------------------------------------------------------
 
 ### This package consists of two folders:
 
-1. **'IVIM_DKI_data'**: The folder consists of IVIM-DKI 4D data with tumor, BPH, 
-and healthy PZ masks. All the images and ROIs are in compressed nii format and to 
-read the images either 'niftiread' function (Matlab R2017b and later) or 
-'load_untouch_niigz' function from
-https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image
-\IVIM_DKI_data\IVIM_DKI_1_5T\'main_program.m' or \IVIM_DKI_data\IVIM_DKI_3T\'main_program.m': 
-Main program which executes all funtions and codes together.
+1. **[IVIM_DKI_data](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data)**: The folders consist of IVIM-DKI 4D data acquried at [1.5T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_1_5T) and [3T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_3T) MRI with tumor, BPH, and healthy PZ ROI masks. All the images and ROIs are in compressed nii format and to read these images either use 'niftiread' function (Matlab R2017b and later) or 'load_untouch_niigz' function from https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image.
+https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_data/IVIM_DKI_1_5T/main_program.m or https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_data/IVIM_DKI_3T/main_program.m: Main program which executes all IVIM-DKI code and funtions in [IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions).
 
-2. **'IVIM_DKI_functions'**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
+
+2. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
 traditional IVIM-DKI and novel IVIM-DKI model with TV. 
--'AIC.m': Calculates Akaike information criterion (AIC) and AIC corrected.
--'aic_aicccal.m': Calculates AIC/AICc for tumor, BPH and healthy PZ masks.
--'allivimdki.m': Function which contains IVIM-DKI model equation.
--'hybrid_TVmodel.m': Executes IVIM-DKI model with TV code.
--'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code. 
--'im2Y.m':Transforms functional image data (4D or 3D array) into data matrix.
--'monoexplog.m': Function which contains monoexponential model equation.
--'tv3d.m':Function which contains 3D TV.
+1. 'AIC.m': Calculates Akaike information criterion (AIC) and AIC corrected (AICc).
+2. 'aic_aicccal.m': Calculates AIC/AICc for tumor, BPH and healthy PZ ROIs from ['AIC.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/AIC.m).
+3. 'allivimdki.m': Function which contains IVIM-DKI model equation.
+4. 'hybrid_TVmodel.m': Executes IVIM-DKI model with TV code using [non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520).
+5. 'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m). 
+6. 'im2Y.m':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
+7. 'monoexplog.m': Function which contains monoexponential model equation.
+8. 'tv3d.m':Function which calculates 3D TV penalty.
 
 Please see ref. [1] for more details on the implementation of TV function.
 
