@@ -6,10 +6,12 @@
 variation (TV) penalty function.
 
 ---------------------------------------------------------------------------------
-**REFERENCES:** [1] Kayal, E. B. et al. (2017). Quantitative analysis of intravoxel 
+**REFERENCES:** 
+1. Kayal, E. B. et al. (2017). Quantitative analysis of intravoxel 
 incoherent motion (IVIM) diffusion MRI using total variation and Huber penalty function. 
 Medical physics, 44(11), 5849-5858.
-[2] Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer 
+
+2. Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer 
 and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
 Magnetic Resonance Materials in Physics, Biology and Medicine.
 ---------------------------------------------------------------------------------
