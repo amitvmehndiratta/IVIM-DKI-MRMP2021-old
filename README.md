@@ -16,6 +16,7 @@ and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI.
 Magnetic Resonance Materials in Physics, Biology and Medicine.
 ---------------------------------------------------------------------------------
 **AUTHOR:** Dr. Amit Mehndiratta, Indian Institute of Technology Delhi, India 
+
 E-mail: <amehndiratta@cbme.iitd.ac.in>, <amit.mehndiratta@keble.oxon.org>.
 - If you have any queries or suggestions about this package, 
     please do not hesitate to contact us.
