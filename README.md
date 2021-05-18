@@ -17,16 +17,14 @@ Magnetic Resonance Materials in Physics, Biology and Medicine.
 ---------------------------------------------------------------------------------
 **AUTHOR:** Dr. Amit Mehndiratta, Indian Institute of Technology Delhi, India 
 E-mail: <amehndiratta@cbme.iitd.ac.in>, <amit.mehndiratta@keble.oxon.org>.
+- If you have any queries or suggestions about this package, 
+    please do not hesitate to contact us.
 ---------------------------------------------------------------------------------
 **Disclaimer: This project can be used only for research purposes. Authors are 
 not liable for any clinical use of it, authors could not be held responsible.**
 ---------------------------------------------------------------------------------
 - Version 1.0: May 2021
 ---------------------------------------------------------------------------------
-
-- If you have any queries or suggestions about this package, 
-    please do not hesitate to contact us.
-
 
 ### This package consists of two folders:
 
