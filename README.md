@@ -33,17 +33,20 @@ and healthy PZ masks. All the images and ROIs are in compressed nii format and t
 read the images either 'niftiread' function (Matlab R2017b and later) or 
 'load_untouch_niigz' function from
 https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image
-'main_program.m': Main program which executes all funtions and codes together.
+\IVIM_DKI_data\IVIM_DKI_1_5T\'main_program.m' or \IVIM_DKI_data\IVIM_DKI_3T\'main_program.m': 
+Main program which executes all funtions and codes together.
 
 2. **'IVIM_DKI_functions'**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
 traditional IVIM-DKI and novel IVIM-DKI model with TV. 
-'AIC.m': Calculates Akaike information criterion (AIC) and AIC corrected.
-'aic_aicccal.m': Calculates AIC/AICc for tumor, BPH and healthy PZ masks.
-'allivimdki.m': Function which contains IVIM-DKI model equation.
-'hybrid_TVmodel.m': Executes IVIM-DKI model with TV code.
-'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code. 
-'monoexplog.m': Function which contains monoexponential model equation.
-'tv3d.m':Function which contains 3D TV.
+-'AIC.m': Calculates Akaike information criterion (AIC) and AIC corrected.
+-'aic_aicccal.m': Calculates AIC/AICc for tumor, BPH and healthy PZ masks.
+-'allivimdki.m': Function which contains IVIM-DKI model equation.
+-'hybrid_TVmodel.m': Executes IVIM-DKI model with TV code.
+-'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code. 
+-'im2Y.m':Transforms functional image data (4D or 3D array) into data matrix.
+-'monoexplog.m': Function which contains monoexponential model equation.
+-'tv3d.m':Function which contains 3D TV.
 Please see ref. [1] for more details on the implementation of TV function.
+Acknowledgement: https://github.com/oliverchampion/IVIM_tools
 
 **Note: IVIM_DKI_functions folder must be setpath before execution of 'main_program.m'.**
