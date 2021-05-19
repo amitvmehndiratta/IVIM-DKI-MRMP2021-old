@@ -17,8 +17,8 @@ Magnetic Resonance Materials in Physics, Biology and Medicine.
 ---------------------------------------------------------------------------------
 If you have any queries or suggestions about this package, kindly contact 
 Dr. Amit Mehndiratta, Indian Institute of Technology Delhi, India 
-
 E-mail: <amehndiratta@cbme.iitd.ac.in>, <amit.mehndiratta@keble.oxon.org>.
+
 ---------------------------------------------------------------------------------
 Disclaimer: This project can be used only for research purposes. Authors are not liable for any clinical use of it, authors could not be held responsible.
 ---------------------------------------------------------------------------------
