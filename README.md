@@ -89,3 +89,8 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
 Please see ref. [1] for more details on the implementation of TV function.
 
 **Note: Please execute 'main_program.m' in IVIM_DKI_functions folder.**
+
+If you use this function in research, please cite:
+
+Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. Magnetic Resonance Materials in Physics, Biology and Medicine.
+doi:
