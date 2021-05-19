@@ -35,6 +35,7 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 traditional IVIM-DKI and novel IVIM-DKI model with TV. 
 
     -'[hybridModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)': Executes IVIM-DKI model with TV code using [non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520).
+    
         -----------------------------------------------------------------------------------------------
         function[paraMap,resnorm,stats_roi]=hyModel(dwi,b,limit,initials,roi,stats,tvIter,alpha,const)
         -----------------------------------------------------------------------------------------------
@@ -59,6 +60,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
                     in the order D, D*, f, and k
 
     -'[hybridmodel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m).
+    
         -----------------------------------------------------------------------------
         function[paraMap,resnorm,stats_roi]=hyModel(dwi,b,limit,initials,roi,stats)
         -----------------------------------------------------------------------------
