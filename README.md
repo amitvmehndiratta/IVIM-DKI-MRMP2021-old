@@ -15,7 +15,7 @@ Medical physics, 44(11), 5849-5858.
 and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
 Magnetic Resonance Materials in Physics, Biology and Medicine.
 ---------------------------------------------------------------------------------
-**AUTHOR:** Dr. Amit Mehndiratta, Indian Institute of Technology Delhi, India 
+Dr. Amit Mehndiratta, Indian Institute of Technology Delhi, India 
 
 E-mail: <amehndiratta@cbme.iitd.ac.in>, <amit.mehndiratta@keble.oxon.org>.
 - If you have any queries or suggestions about this package, 
@@ -34,17 +34,56 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 2. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
 traditional IVIM-DKI and novel IVIM-DKI model with TV. 
 
-    -'allivimdki.m': Function which contains IVIM-DKI model equation.
+    -'[hybridModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)': Executes IVIM-DKI model with TV code using [non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520).
+        -----------------------------------------------------------------------------------------------
+        function[paraMap,resnorm,stats_roi]=hyModel(dwi,b,limit,initials,roi,stats,tvIter,alpha,const)
+        -----------------------------------------------------------------------------------------------
+        Input:
+        dwi =     4D DWI data, MxNxSxB format where M and N are x and y, S is number of slices, 
+                  and B is number of b-values 
+        b =       b-values, must be a row matrix
+        limit =   2x4 matrix with lower (1st row) and upper (2nd row) 
+                  limits of all parameters in the order D, D*, f, and k
+        initial = 1x4 matrix with initial values of all parameters 
+                  in the order D, D*, f, and k
+        roi =     Any region of interest, must be in 3D format MxNxS and logical
+        stats =   If stats = true, then mean and std of ROI is calculated
+        tvIter =  Define the number of TV iteration to be performed
+        alpha =   Alpha is a small positive constant, range from 0 to 1
+        const =   Const is a relaxation parameter, range from 0 to 1
 
-    -'hybrid_TVmodel.m': Executes IVIM-DKI model with TV code using [non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520).
+        Output:
+        paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
+        resnorm =   Voxelwise squared norm of the residual
+        stats_roi = Mean and std of ROI are saved in [mean_roi, std_roi] format
+                    in the order D, D*, f, and k
 
-    -'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m). 
+    -'[hybridmodel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m).
+        -----------------------------------------------------------------------------
+        function[paraMap,resnorm,stats_roi]=hyModel(dwi,b,limit,initials,roi,stats)
+        -----------------------------------------------------------------------------
+        Input:
+        dwi =     4D DWI data, MxNxSxB format where M and N are x and y, S is number of slices, 
+                  and B is number of b-values 
+        b =       b-values, must be a row matrix
+        limit =   2x4 matrix with lower (1st row) and upper (2nd row) 
+                  limits of all parameters in the order D, D*, f, and k
+        initial = 1x4 matrix with initial values of all parameters 
+                  in the order D, D*, f, and k
+        roi =     Any region of interest, must be in 3D format MxNxS and logical
+        stats =   If stats = true, then mean and std of ROI is calculated
 
-    -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
+        Output:
+        paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
+        resnorm =   Voxelwise squared norm of the residual
+        stats_roi = Mean and std of ROI are saved in [mean_roi, std_roi] format
+                    in the order D, D*, f, and k
 
-    -'monoexplog.m': Function which contains monoexponential model equation.
+  -'allivimdki.m': Function which contains IVIM-DKI model equation.
+  
+  -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
 
-    -'tv3d.m':Function which calculates 3D TV penalty.
+  -'tv3d.m':Function which calculates 3D TV penalty.
 
 Please see ref. [1] for more details on the implementation of TV function.
 
