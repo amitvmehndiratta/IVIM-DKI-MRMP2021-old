@@ -40,7 +40,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
 
     -'hybridmodel.m': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m). 
 
-    -'[im2Y.m](https://github.com/oliverchampion/IVIM_tools)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
+    -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
 
     -'monoexplog.m': Function which contains monoexponential model equation.
 
