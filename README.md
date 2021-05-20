@@ -3,7 +3,7 @@
 
 |<https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021>|
 --> A package providing MATLAB programming tools for IVIM-DKI analysis with total
-variation (TV) penalty function which provides an adaptive spatial homogeneity by 
+variation (TV) penalty function that provides an adaptive spatial homogeneity by 
 removing spurious values that may arise during parametric reconstruction of the image.
 
 ---------------------------------------------------------------------------------
