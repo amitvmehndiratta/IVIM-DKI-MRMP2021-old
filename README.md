@@ -7,7 +7,7 @@ variation (TV) penalty function.
 
 ---------------------------------------------------------------------------------
 **REFERENCES:** 
-1. Kayal, E. B. et al. (2017). Quantitative analysis of intravoxel 
+[1](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520). Kayal, E. B. et al. (2017). Quantitative analysis of intravoxel 
 incoherent motion (IVIM) diffusion MRI using total variation and Huber penalty function. 
 Medical physics, 44(11), 5849-5858.
 
@@ -36,7 +36,7 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 2. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
 traditional IVIM-DKI and novel IVIM-DKI model with TV. 
 
-    -'[hybridModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)': Executes IVIM-DKI model with TV code using [non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520).
+    -'[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)': Executes IVIM-DKI model with TV code using non-linear least square fitting with iterative total variation (TV) penalty function to perform spatial homogeneity on IVIM-DKI parameter reconstruction.
     
         -----------------------------------------------------------------------------------------------
         function[paraMap,resnorm,stats_roi]=hyModel(dwi,b,limit,initials,roi,stats,tvIter,alpha,const)
@@ -61,7 +61,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
         stats_roi = Mean and std of ROI are saved in [mean_roi, std_roi] format
                     in the order D, D*, f, and k
 
-    -'[hybridmodel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)': Executes Monoexponential and IVIM-DKI model code using ['monoexplog.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/monoexplog.m) and ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m).
+    -'[hymodel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)': Executes traditional IVIM-DKI model code using ['allivimdki.m'](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/allivimdki.m).
     
         -----------------------------------------------------------------------------
         function[paraMap,resnorm,stats_roi]=hyModel(dwi,b,limit,initials,roi,stats)
@@ -87,9 +87,9 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
   
   -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
 
-  -'tv3d.m':Function which calculates 3D TV penalty.
-
-Please see ref. [1] for more details on the implementation of TV function.
+  -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
+  
+  - 'main_program.m': Example code which shows how to read the data and use the function '[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)' and '[hyModel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)'.
 
 **Note: Please execute 'main_program.m' in IVIM_DKI_functions folder.**
 
