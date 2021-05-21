@@ -78,20 +78,20 @@ mkdir(strcat(path,'Output'))
 
 % Save parameters from HY model
 save_untouch_niigz(imrotate(paraMap.DmapHY,-90),...
-    strcat(path,'Output\Dmap_HY.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\Dmap_HY.nii.gz'),strcat(path,dwi_file))
 save_untouch_niigz(imrotate(paraMap.DpmapHY,-90),...
-    strcat(path,'Output\Dpmap_HY.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\Dpmap_HY.nii.gz'),strcat(path,dwi_file))
 save_untouch_niigz(imrotate(paraMap.fmapHY,-90),...
-    strcat(path,'Output\fmap_HY.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\fmap_HY.nii.gz'),strcat(path,dwi_file))
 save_untouch_niigz(imrotate(paraMap.kmapHY,-90),...
-    strcat(path,'Output\kmap_HY.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\kmap_HY.nii.gz'),strcat(path,dwi_file))
 
 % Save parameters from HY model with TV
 save_untouch_niigz(imrotate(paraMapTV.DmapHYtv,-90),...
-    strcat(path,'Output\Dmap_HYtv.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\Dmap_HYtv.nii.gz'),strcat(path,dwi_file))
 save_untouch_niigz(imrotate(paraMapTV.DpmapHYtv,-90),...
-    strcat(path,'Output\Dpmap_HYtv.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\Dpmap_HYtv.nii.gz'),strcat(path,dwi_file))
 save_untouch_niigz(imrotate(paraMapTV.fmapHYtv,-90),...
-    strcat(path,'Output\fmap_HYtv.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\fmap_HYtv.nii.gz'),strcat(path,dwi_file))
 save_untouch_niigz(imrotate(paraMapTV.kmapHYtv,-90),...
-    strcat(path,'Output\kmap_HYtv.nii.gz'),strcat(path,'ivim13b.nii.gz'))
+    strcat(path,'Output\kmap_HYtv.nii.gz'),strcat(path,dwi_file))
