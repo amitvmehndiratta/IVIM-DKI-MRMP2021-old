@@ -89,11 +89,12 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
   
   -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)':Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values.
 
+  -'main_program.m': Example code which shows how to read or write the data and how to use the functions '[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)' and '[hyModel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)'.
+
   -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
   
 **Note: Please execute 'main_program.m' in IVIM_DKI_functions folder.**
 
-   - 'main_program.m': Example code which shows how to read or write the data and how to use the functions '[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)' and '[hyModel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)'.
 
 If you use this function in research, please cite:
 
