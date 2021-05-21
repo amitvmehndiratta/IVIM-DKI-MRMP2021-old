@@ -27,6 +27,7 @@ function [paraMap,resnorm,stats_roi] = hyModel(dwi,b,limit,initials,roi,stats)
 % and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
 % Magnetic Resonance Materials in Physics, Biology and Medicine.
 % doi:
+
 %% Check the inputs given
 if length(size(dwi))~=4
     error('DWI image must be a 4D matrix');
@@ -40,6 +41,7 @@ end
 if ~isrow(b)
     b = b';
 end
+
 %% Body mask generation (eliminating background noise)
 for s=1:size(dwi,3)
         thresh =10;
@@ -54,16 +56,18 @@ for s=1:size(dwi,3)
 end
 mask=logical(allslice1);
 dwiMasked=dwi.*mask;
+
 %% Normalization of IVIM-DKI data
 dwiSignal=dwiMasked./dwiMasked(:,:,:,1);
 dwiSignal(isnan(dwiSignal))=0;
 dwiSignal(isinf(dwiSignal))=0;
 [row,col,totalslice,~] = size(dwiSignal);
+
 %% Vectorization
 ydata_ivimdki=im2Y(dwiSignal,mask); 
 [vox,~]=size(ydata_ivimdki);
+
 %% Initialization of maps
-%Parameter maps
 ADCmap_allb=zeros(row,col,totalslice);
 DmapHY_allb=zeros(row,col,totalslice);
 DpmapHY_allb=zeros(row,col,totalslice);
@@ -76,13 +80,15 @@ dpHY_allb=zeros(vox,1);
 fHY_allb=zeros(vox,1);
 kHY_allb=zeros(vox,1);
 resHY_allb=zeros(vox,1);
+
 %% Model fitting
 fprintf('Processing IVIM-DKI data...\n')
 start=tic;
-for slice= 1:vox   
+
+parfor slice= 1:vox   
        options = optimset('MaxIter',[], 'Display','off');   
        ydata13b=squeeze(ydata_ivimdki(slice,:));
-%% Hybrid model fit using all b-values
+% Hybrid model fit using all b-values
        [HYDDpfk, resnormHY] = lsqcurvefit(@allivimdki,initials,b,ydata13b,limit(1,:),limit(2,:),options);
 % Assign D, D*, f and k value per voxel
        dHY_allb(slice,:) = HYDDpfk(1);
@@ -91,9 +97,11 @@ for slice= 1:vox
        kHY_allb(slice,:) = HYDDpfk(4);
        resHY_allb(slice,:)=resnormHY;
 end
+
 totalTime_hy=toc(start);
  fprintf(strcat('Total time taken by traditional HY model:',...
     num2str(round(floor(totalTime_hy/60),0)),'.',num2str(round(rem(totalTime_hy,60),0)),' minutes\n'))
+
 %% Saving Parameter maps
 DmapHY_allb(mask)=exp(dHY_allb);
 DpmapHY_allb(mask)=exp(dpHY_allb);
@@ -104,6 +112,7 @@ paraMap.DmapHY=DmapHY_allb;
 paraMap.DpmapHY=DpmapHY_allb;
 paraMap.fmapHY=fmapHY_allb;
 paraMap.kmapHY=kmapHY_allb;
+
 %% Statistics of ROI provided
 if stats==1
     % Calculating mean of ROI given
