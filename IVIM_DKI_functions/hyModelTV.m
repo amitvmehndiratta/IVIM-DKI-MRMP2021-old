@@ -29,6 +29,7 @@ function [paraMap,resnorm,stats_roi] = hyModelTV(dwi,b,limit,initial,roi,stats,t
 % and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
 % Magnetic Resonance Materials in Physics, Biology and Medicine.
 % doi:
+
 %% Check the inputs given
 if length(size(dwi))~=4
     error('DWI image must be a 4D matrix');
@@ -42,6 +43,7 @@ end
 if ~isrow(b)
     b = b';
 end
+
 %% Body mask generation (eliminating background noise)
 for s=1:size(dwi,3)
         thresh =10;
@@ -56,21 +58,24 @@ for s=1:size(dwi,3)
 end
 mask=logical(allslice1);
 dwiMasked=dwi.*mask;
+
 %% Normalization of IVIM-DKI data
 dwiSignal=dwiMasked./dwiMasked(:,:,:,1);
 dwiSignal(isnan(dwiSignal))=0;
 dwiSignal(isinf(dwiSignal))=0;
 [row,col,totalslice,~] = size(dwiSignal);
- %% Initialization of parameter maps
+
+%% Initialization of parameter maps
 DmapHYtv_allb=zeros(row,col,totalslice);
 DpmapHYtv_allb=zeros(row,col,totalslice);
 fmapHYtv_allb=zeros(row,col,totalslice);
 kmapHYtv_allb=zeros(row,col,totalslice);
 resHYtvmap_allb=zeros(row,col,totalslice);
+
 %% IVIM-DKI with TV fitting
 start=tic;
-%% IVIM-DKI with TV and parallel computing
-% lsqcurvefitting & TV reduction for hy fitting
+% lsqcurvefitting & TV reduction for HY fitting
+
 parfor smoothn=1:tvIter % TV iteration
     % Vectorization
     ydata_ivimdki=im2Y(dwiSignal,mask);
@@ -184,9 +189,11 @@ parfor smoothn=1:tvIter % TV iteration
     kbi_tv = kmaptv;
     parsave_tv(sprintf('output_tv%d.mat', smoothn), D_tv, Dp_tv, f_tv,k_tv,resHYtv_allb1);
 end
+
 totalTime_TV=toc(start);
  fprintf(strcat('Total time taken by novel HY model with TV:',...
     num2str(round(floor(totalTime_TV/60),0)),'.',num2str(round(rem(totalTime_TV,60),0)),' minutes\n'))
+
 %% Saving Parameter maps
 load(strcat(pwd,'\output_tv10.mat')) % Take the last iteration output from parloop
 DmapHYtv_allb(mask )=exp(x(mask ));
@@ -198,10 +205,12 @@ paraMap.DmapHYtv=DmapHYtv_allb;
 paraMap.DpmapHYtv=DpmapHYtv_allb;
 paraMap.fmapHYtv=fmapHYtv_allb;
 paraMap.kmapHYtv=kmapHYtv_allb;
+
 % Delete temp files from directory
 for i=1:tvIter
     delete(strcat(pwd,'\output_tv',num2str(i),'.mat'))
 end
+
 %% Statistics of ROI provided
 if stats==1
     % Calculating mean of ROI given
