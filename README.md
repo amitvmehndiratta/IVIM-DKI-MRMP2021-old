@@ -93,7 +93,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
   
 **Note: Please execute 'main_program.m' in IVIM_DKI_functions folder.**
 
-    - 'main_program.m': Example code which shows how to read or write the data and how to use the functions '[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)' and '[hyModel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)'.
+   - 'main_program.m': Example code which shows how to read or write the data and how to use the functions '[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)' and '[hyModel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)'.
 
 If you use this function in research, please cite:
 
