@@ -77,9 +77,9 @@ fHY_allb=zeros(vox,1);
 kHY_allb=zeros(vox,1);
 resHY_allb=zeros(vox,1);
 %% Model fitting
+fprintf('Processing IVIM-DKI data...\n')
 start=tic;
-for slice= 1:vox
-%fprintf(' Processing voxel: %d \n',slice);   
+for slice= 1:vox   
        options = optimset('MaxIter',[], 'Display','off');   
        ydata13b=squeeze(ydata_ivimdki(slice,:));
 %% Hybrid model fit using all b-values
