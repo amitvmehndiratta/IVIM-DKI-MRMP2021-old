@@ -3,6 +3,7 @@
 %%%%%% prostatic hyperplasia: comparison of 1.5T vs. 3T MRI %%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%% MAIN PROGRAM %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %% Read patient data and ROI
 % Select ivim file
 [dwi_file,path]=uigetfile('*.nii.gz', 'Select IVIM-DKI data');
@@ -47,10 +48,10 @@ end
 pz=load_untouch_niigz(strcat(path,'\',pz_file)); %load main image file
 pz=double(pz.img); 
 pz=logical(imrotate(pz,90));
+
 %% Define parameters 
 %b-values 
  b=[0 25 50 75 100 150 200 500 800 1000 1250 1500 2000];
- b_mono=[0 500 800 1000];
  
 % To perform statistics
  stats=true;
@@ -68,11 +69,13 @@ roi=tumor;
  alpha=0.005;
  const=0.99;
  TViter=10;
+
 %% Codes to run
- [paraMapHY,resnorm,stats_roi] = hyModel(dwiData,b,limit_hy,D0_hy,tumor,stats);
+ [paraMapHY,resnorm,stats_roiHY] = hyModel(dwiData,b,limit_hy,D0_hy,tumor,stats);
  
- [paraMapHYTV,resnormTV,stats_roiTV] = hyModelTV(dwiData,b,limit_hy,D0_hy,tumor,...
+ [paraMapHYTV,resnormTV,stats_roiHYTV] = hyModelTV(dwiData,b,limit_hy,D0_hy,tumor,...
     stats,TViter,alpha,const);
+
 %% Save parameter maps in compressed nifti format
 mkdir(strcat(path,'Output'))
 
