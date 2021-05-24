@@ -1,21 +1,19 @@
-# IVIM-DKI analysis with total variation penalty funtion in prostate cancer
+# IVIM-DKI analysis with total variation penalty funtion for prostate cancer and BPH
 ---------------------------------------------------------------------------------
 
-|<https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021>|
---> A package providing MATLAB programming tools for IVIM-DKI analysis with total
-variation (TV) penalty function that provides an adaptive spatial homogeneity by 
-removing spurious values that may arise during parametric reconstruction of the image.
+A package providing MATLAB programming tools for IVIM-DKI analysis with total
+variation (TV) penalty function for prostate cancer and benign benign prostatic hyperplasia (BPH).
 
 ---------------------------------------------------------------------------------
 **REFERENCES:** 
 
-[1](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520). Kayal, E. B. et al. (2017). Quantitative analysis of intravoxel 
-incoherent motion (IVIM) diffusion MRI using total variation and Huber penalty function. 
-Medical physics, 44(11), 5849-5858.
-
-[2]. Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer 
+[1] Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer 
 and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
 Magnetic Resonance Materials in Physics, Biology and Medicine.
+
+[[2]]. (https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520). Kayal, E. B. et al. (2017). Quantitative analysis of intravoxel 
+incoherent motion (IVIM) diffusion MRI using total variation and Huber penalty function. 
+Medical physics, 44(11), 5849-5858.
 
 ---------------------------------------------------------------------------------
 If you have any queries or suggestions about this package, kindly contact 
@@ -32,7 +30,7 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 
 ### This package consists of two folders:
 
-1. **[IVIM_DKI_data](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data)**: The folders consist of IVIM-DKI 4D data acquried at [1.5T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_1_5T) and [3T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_3T) MRI with tumor, BPH, and healthy PZ ROI masks. All the images and ROIs are in compressed nii format and to read these images either use 'niftiread' function (Matlab R2017b and later) or [load_untouch_niigz](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image).
+1. **[IVIM_DKI_data](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data)**: The folders consist of IVIM-DKI 4D data acquried at [1.5T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_1_5T) and [3T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_3T) MRI. In these folders 4D IVIM-DKI data named as 'ivim13b.nii.gz' provided with ROI masks of tumor region, BPH, and healthy peripheral zone (PZ) region named as 'tumor_ROI.nii.gz', 'bph_roi.nii.gz', and pz_roi.nii.gz. All the images and ROIs are in compressed nii format and to read these images either use 'niftiread' function (Matlab R2017b and later) or [load_untouch_niigz](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image).
 
 
 2. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
