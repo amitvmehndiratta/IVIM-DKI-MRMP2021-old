@@ -70,7 +70,7 @@ DmapHYtv_allb=zeros(row,col,totalslice);
 DpmapHYtv_allb=zeros(row,col,totalslice);
 fmapHYtv_allb=zeros(row,col,totalslice);
 kmapHYtv_allb=zeros(row,col,totalslice);
-resHYtvmap_allb=zeros(row,col,totalslice);
+resnorm=zeros(row,col,totalslice);
 
 %% IVIM-DKI with TV fitting
 start=tic;
