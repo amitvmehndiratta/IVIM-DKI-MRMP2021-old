@@ -52,7 +52,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
         initial = 1x4 matrix with initial values of all parameters 
                   in the order D, D*, f, and k
         roi =     Any region of interest, must be in 3D format MxNxS and logical
-        stats =   If stats = true, then mean and std of ROI is calculated
+        stats =   If stats = true, then mean and std of ROI are calculated
         tvIter =  Define the number of TV iteration to be performed
         alpha =   Alpha is a small positive constant, range from 0 to 1
         const =   Const is a relaxation parameter, range from 0 to 1
@@ -77,7 +77,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
         initial = 1x4 matrix with initial values of all parameters 
                   in the order D, D*, f, and k
         roi =     Any region of interest, must be in 3D format MxNxS and logical
-        stats =   If stats = true, then mean and std of ROI is calculated
+        stats =   If stats = true, then mean and std of ROI are calculated
 
         Output:
         paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
