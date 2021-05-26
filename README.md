@@ -34,7 +34,7 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 
 
 2. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
-traditional IVIM-DKI and novel IVIM-DKI model with TV. 
+novel IVIM-DKI model with TV. 
 
    -'[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)': Executes IVIM-DKI model with TV code using non-linear least square optimization with iterative total variation (TV) penalty function to evaluate IVIM-DKI parameter reconstruction.
     
@@ -61,7 +61,7 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
   
   -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)': Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values. Adapted function from https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting.
   
-  -'stats_roi.m': Calculates mean and standard deviation of ROI provided for IVIM-DKI parameters.
+  -'stats_roi.m': Calculates mean and standard deviation of IVIM-DKI parameters for ROI specified.
   
         -----------------------------------------------------------------------------
         function[mean_roi, std_roi] = stats_roi(parameterMap,roi,stats)
