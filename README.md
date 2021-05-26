@@ -57,29 +57,9 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
         paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
         resnorm =   Voxelwise squared norm of the residual
 
-   -'[hymodel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)': Executes traditional IVIM-DKI model using non-linear least square optimization to obtain IVIM-DKI parameters.
-    
-        -----------------------------------------------------------------------------
-        function [paraMap,resnorm] = hyModel (dwi,b,limit,initials)
-        -----------------------------------------------------------------------------
-        Input:
-        dwi =     4D DWI data, MxNxSxB format where M and N are x and y, S is number of slices, 
-                  and B is number of b-values 
-        b =       b-values, must be a row matrix
-        limit =   2x4 matrix with lower (1st row) and upper (2nd row) 
-                  limits of all parameters in the order D, D*, f, and k
-        initial = 1x4 matrix with initial values of all parameters 
-                  in the order D, D*, f, and k
-
-        Output:
-        paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
-        resnorm =   Voxelwise squared norm of the residual
-
   -'allivimdki.m': Function which contains IVIM-DKI model equation.
   
   -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)': Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values. Adapted function from https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting.
-
-  -'main_program.m': Example code which shows how to read or write the data and how to use the functions '[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)' and '[hyModel.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModel.m)'.
   
   -'stats_roi.m': Calculates mean and standard deviation of ROI provided for IVIM-DKI parameters.
   
@@ -98,8 +78,6 @@ traditional IVIM-DKI and novel IVIM-DKI model with TV.
   
 
   -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1] and [2](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
-  
-**Note: Please execute 'main_program.m' in IVIM_DKI_functions folder.**
 
 
 If you use this function in research, please cite:
