@@ -1,7 +1,7 @@
 # IVIM-DKI analysis with total variation penalty funtion for prostate cancer and BPH
 ---------------------------------------------------------------------------------
 
-A package providing MATLAB programming tools for IVIM-DKI analysis with total
+A package providing MATLAB programming tools and GUI for IVIM-DKI analysis with total
 variation (TV) penalty function for prostate cancer and benign benign prostatic hyperplasia (BPH).
 
 ---------------------------------------------------------------------------------
@@ -57,12 +57,13 @@ novel IVIM-DKI model with TV.
         paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
         resnorm =   Voxelwise squared norm of the residual
 
-  -'allivimdki.m': Function which contains IVIM-DKI model equation.
   
-  -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)': Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values. Adapted function from https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting.
+   -'allivimdki.m': Function which contains IVIM-DKI model equation.
   
-  -'stats_roi.m': Calculates mean and standard deviation of IVIM-DKI parameters for ROI specified.
+   -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)': Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values. Adapted function from https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting.
   
+   -'stats_roi.m': Calculates mean and standard deviation of IVIM-DKI parameters for ROI specified.
+        
         -----------------------------------------------------------------------------
         function[mean_roi, std_roi] = stats_roi(parameterMap,roi,stats)
         -----------------------------------------------------------------------------
@@ -78,6 +79,8 @@ novel IVIM-DKI model with TV.
   
 
   -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1] and [2](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
+
+3. **'ivimDKItvtool.mlappinstall'**: Matlab App installer for accessing IVIIM-DKI with TV analysis toolbox 'ivimDKItvtool'. Kindly install the app ivimDKItvtool.mlappinstall by double-click on the icon and app gets automatically installed after matlab opens. After installation, click on 'APPS' section in matlab and then select ivimDKItvtool to start the app.
 
 
 If you use this function in research, please cite:
