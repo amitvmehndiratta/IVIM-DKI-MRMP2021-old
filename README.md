@@ -33,8 +33,8 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 1. **'ivimDKItvtool.mlappinstall'**: Matlab App installer for accessing IVIM-DKI with TV analysis toolbox 'ivimDKItvtool'. Kindly click install the app ivimDKItvtool.mlappinstall by double-click on the icon and app gets installed after clicking 'install'. After installation, click on 'APPS' section in matlab and then select ivimDKItvtool_1 icon to start the app. 
  
  - ivimDKItvtool app execute IVIM-DKI analysis with TV, consisting of two tabs: 
-  1. Input Data and Analysis, where IVIM-DKI data with model as wellas TV parameters are fed to IVIM-DKI model with TV, and 
-  2. Output, where parameter maps can be viewed and saved as nii.gz format, and ROI statistics also included in this tab, where ROI can be loaded such as tumor, BPH, or PZ ROI and mean and standard deviation of parameters are calculated for ROI provided, which is displayed on app and saved as .txt.
+  1. Input Data and Analysis, where user needs to select IVIM-DKI data and define model and TV parameters; these inputs are fed to IVIM-DKI model with TV after clicking on 'Analyse IVIM-DKI model with TV', and 
+  2. Output, where IVIM-DKI parameter maps can be viewed in different colormaps and saved as nii.gz format. ROI statistics also included in this tab, where ROI can be loaded such as tumor, BPH, or PZ ROI and statistics can be performed after clicking on 'Calculate ROI stats and Save statistics' where mean and standard deviation of IVIM-DKI parameters are calculated, which is displayed on app and saved as .txt file for ROI provided.
    
    - ivimDKItvtool app Front-side:
       ![image](https://user-images.githubusercontent.com/66351266/119770742-3d911b80-beda-11eb-8989-5452b8c5e863.png)
@@ -43,11 +43,10 @@ Disclaimer: This project can be used only for research purposes. Authors are not
       ![image](https://user-images.githubusercontent.com/66351266/119771161-dde74000-beda-11eb-96bc-a9eea80e0975.png)
 
 
-2. **[IVIM_DKI_data](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data)**: The folders consist of IVIM-DKI 4D data acquried at [1.5T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_1_5T) and [3T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_3T) MRI. In these folders 4D IVIM-DKI data named as 'ivim13b.nii.gz' provided with ROI masks of tumor region, BPH, and healthy peripheral zone (PZ) region named as 'tumor_ROI.nii.gz', 'bph_roi.nii.gz', and pz_roi.nii.gz. All the images and ROIs are in compressed nii format and to read these images either use 'niftiread' function (Matlab R2017b and later) or [load_untouch_niigz](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image).
+2. **[IVIM_DKI_data](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data)**: The folders consist of IVIM-DKI 4D data acquried at [1.5T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_1_5T) and [3T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_3T) MRI. In these folders 4D IVIM-DKI data named as 'ivim13b.nii.gz' provided with ROI masks of tumor region, BPH, and healthy peripheral zone (PZ) region named as 'tumor_ROI.nii.gz', 'bph_roi.nii.gz', and pz_roi.nii.gz respectively. All the images and ROIs are in compressed nii format.
 
 
-3. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB codes to compute IVIM-DKI parameter maps obtained from 
-novel IVIM-DKI model with TV. 
+3. **[IVIM_DKI_functions](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_functions)**: MATLAB functions to compute IVIM-DKI parameter maps obtained from novel IVIM-DKI model with TV and other utilities. 
 
    -'[hyModelTV.m](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/blob/main/IVIM_DKI_functions/hyModelTV.m)': Executes IVIM-DKI model with TV code using non-linear least square optimization with iterative total variation (TV) penalty function to evaluate IVIM-DKI parameter reconstruction.
     
@@ -90,6 +89,7 @@ novel IVIM-DKI model with TV.
         std_roi = Standard deviation of IVIM-DKI parameters for ROI specified and 
                    are saved as struct in the order D, D*, f, and k
   
+  - parsave_tv: For saving parfor function variables.
 
   -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1] and [2](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
 
