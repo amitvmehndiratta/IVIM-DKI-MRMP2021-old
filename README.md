@@ -30,8 +30,11 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 
 ### This package consists of app installer and two folders:
 
-1. **'ivimDKItvtool_1.mlappinstall'**: Matlab App installer for accessing IVIM-DKI with TV analysis toolbox 'ivimDKItvtool'. Kindly click install the app ivimDKItvtool.mlappinstall by double-click on the icon and app gets installed after clicking 'install'. After installation, click on 'APPS' section in matlab and then select ivimDKItvtool_1 icon to start the app. 
- - ivimDKItvtool app execute IVIM-DKI analysis with TV, consisting of two tabs: 1. Input Data and Analysis, where IVIM-DKI data with model as wellas TV parameters are fed to IVIM-DKI model with TV, and 2. Output, where parameter maps can be viewed and saved as nii.gz format, and ROI statistics also included in this tab, where ROI can be loaded and mean and standard deviation of parameters are calculated for ROI provided.
+1. **'ivimDKItvtool.mlappinstall'**: Matlab App installer for accessing IVIM-DKI with TV analysis toolbox 'ivimDKItvtool'. Kindly click install the app ivimDKItvtool.mlappinstall by double-click on the icon and app gets installed after clicking 'install'. After installation, click on 'APPS' section in matlab and then select ivimDKItvtool_1 icon to start the app. 
+ 
+ - ivimDKItvtool app execute IVIM-DKI analysis with TV, consisting of two tabs: 
+  1. Input Data and Analysis, where IVIM-DKI data with model as wellas TV parameters are fed to IVIM-DKI model with TV, and 
+  2. Output, where parameter maps can be viewed and saved as nii.gz format, and ROI statistics also included in this tab, where ROI can be loaded such as tumor, BPH, or PZ ROI and mean and standard deviation of parameters are calculated for ROI provided, which is displayed on app and saved as .txt.
    
    - ivimDKItvtool app Front-side:
       ![image](https://user-images.githubusercontent.com/66351266/119770742-3d911b80-beda-11eb-8989-5452b8c5e863.png)
