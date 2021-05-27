@@ -1,4 +1,4 @@
-# IVIM-DKI analysis with total variation penalty funtion for prostate cancer and BPH
+# IVIM-DKI analysis with total variation penalty function for prostate lesions
 ---------------------------------------------------------------------------------
 
 A package providing MATLAB programming tools and GUI for IVIM-DKI analysis with total
