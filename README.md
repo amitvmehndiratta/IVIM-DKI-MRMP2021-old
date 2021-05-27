@@ -31,6 +31,10 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 ### This package consists of app installer and two folders:
 
 1. **'ivimDKItvtool.mlappinstall'**: Matlab App installer for accessing IVIIM-DKI with TV analysis toolbox 'ivimDKItvtool'. Kindly install the app ivimDKItvtool.mlappinstall by double-click on the icon and app gets automatically installed after matlab opens. After installation, click on 'APPS' section in matlab and then select ivimDKItvtool to start the app.
+   - ivimDKItvtool app Front-side:
+      ![image](https://user-images.githubusercontent.com/66351266/119769047-5ba94c80-bed7-11eb-9500-ff287c53449d.png)
+
+   - ivimDKItvtool app Back-side:
 
 2. **[IVIM_DKI_data](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data)**: The folders consist of IVIM-DKI 4D data acquried at [1.5T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_1_5T) and [3T](https://github.com/amitvmehndiratta/IVIM-DKI-MRMP2021/tree/main/IVIM_DKI_data/IVIM_DKI_3T) MRI. In these folders 4D IVIM-DKI data named as 'ivim13b.nii.gz' provided with ROI masks of tumor region, BPH, and healthy peripheral zone (PZ) region named as 'tumor_ROI.nii.gz', 'bph_roi.nii.gz', and pz_roi.nii.gz. All the images and ROIs are in compressed nii format and to read these images either use 'niftiread' function (Matlab R2017b and later) or [load_untouch_niigz](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image).
 
