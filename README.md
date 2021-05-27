@@ -36,10 +36,10 @@ Disclaimer: This project can be used only for research purposes. Authors are not
   1. Input Data and Analysis, where user needs to select IVIM-DKI data and define parameters; these inputs are fed to IVIM-DKI model with TV after clicking on 'Analyse IVIM-DKI model with TV', and analysis can also be initiated with default parameters defined in the app.
   2. Output, where IVIM-DKI parameter maps can be viewed in different colormaps and saved as nii.gz format. ROI statistics also included in this tab, where ROI can be loaded such as tumor, BPH, or PZ ROI and statistics can be performed after clicking on 'Calculate ROI stats and Save statistics' where, mean and standard deviation of IVIM-DKI parameters are calculated, which is displayed on app and saved as .txt file for ROI provided.
    
-   - ivimDKItvtool app Front-side:
+   - ivimDKItvtool app tab: Input Data and Analysis display
       ![image](https://user-images.githubusercontent.com/66351266/119849766-883a8400-bf2a-11eb-9fe9-2add9eebb8ac.png)
 
-   - ivimDKItvtool app Back-side:
+   - ivimDKItvtool app tab: Output display
       ![image](https://user-images.githubusercontent.com/66351266/119849888-a6a07f80-bf2a-11eb-9c15-d86982acd92a.png)
 
 
