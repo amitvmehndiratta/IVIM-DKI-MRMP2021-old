@@ -74,7 +74,7 @@ Disclaimer: This project can be used only for research purposes. Authors are not
   
    -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)': Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values. Adapted function from https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting.
   
-  - parsave_tv: For saving parfor function variables.
+   - parsave_tv: For saving parfor function variables.
    
    -'stats_roi.m': Calculates mean and standard deviation of IVIM-DKI parameters for ROI specified.
         
