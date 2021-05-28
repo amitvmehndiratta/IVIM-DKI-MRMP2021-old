@@ -6,8 +6,8 @@ function [mean_roi, std_roi] = stats_roi(paraMap,roi)
 %              for IVIM-DKI parameters
 %
 % Input:
-% paraMap =   IVIM-DKI parameters are saved as struct in the order D, D*, f, and k
-% roi =       b-values, must be a row matrix
+% paraMap =   IVIM-DKI parameters saved as struct in the order D, D*, f, and k (output generated from hyModelTV.m)
+% roi =       ROI mask in 2D or 3D logical matrix format
 
 % Output:
 % mean_roi = Average of IVIM-DKI parameters for ROI specified and 
@@ -15,7 +15,7 @@ function [mean_roi, std_roi] = stats_roi(paraMap,roi)
 % std_roi = Standard deviation of IVIM-DKI parameters for ROI specified and 
 %            are saved as struct in the order D, D*, f, and k
 %
-% Copyright © 2021 IIT Delhi, India.
+% Copyright Â© 2021 IIT Delhi, India.
 % Disclaimer: This project can be used only for research purposes. Authors 
 % are not liable for any clinical use of it, authors could not be held responsible.
 % For queries or suggestions about this package, kindly contact Dr. Amit Mehndiratta, 
