@@ -32,14 +32,14 @@ Disclaimer: This project can be used only for research purposes. Authors are not
 
 1. **'ivimDKItvtool.mlappinstall'**: Matlab App installer for accessing IVIM-DKI with TV analysis toolbox 'ivimDKItvtool'. Kindly click install the app ivimDKItvtool.mlappinstall by double-click on the icon and app gets installed after clicking 'install'. After installation, click on 'APPS' section in matlab and then select ivimDKItvtool icon to start the app. 
  
- - ivimDKItvtool app execute IVIM-DKI analysis with TV, consisting of two tabs: 
-  1. Input Data and Analysis, where user needs to select IVIM-DKI data and define parameters; these inputs are fed to IVIM-DKI model with TV after clicking on 'Analyse IVIM-DKI model with TV', and analysis can also be initiated with default parameters defined in the app.
-  2. Output, where IVIM-DKI parameter maps can be viewed in different colormaps and saved as nii.gz format. ROI statistics also included in this tab, where ROI can be loaded such as tumor, BPH, or PZ ROI and statistics can be performed after clicking on 'Calculate ROI stats and Save statistics' where, mean and standard deviation of IVIM-DKI parameters are calculated, which is displayed on app and saved as .txt file for ROI provided.
+  - ivimDKItvtool app execute IVIM-DKI analysis with TV, consisting of two tabs: 
+     1. Input Data and Analysis, where user needs to select IVIM-DKI data and define parameters; these inputs are fed to IVIM-DKI model with TV after clicking on 'Analyse IVIM-DKI model with TV', and analysis can also be initiated with default parameters defined in the app.
+     2. Output, where IVIM-DKI parameter maps can be viewed in different colormaps and saved as nii.gz format. ROI statistics also included in this tab, where ROI can be loaded such as tumor, BPH, or PZ ROI and statistics can be performed after clicking on 'Calculate ROI stats and Save statistics' where, mean and standard deviation of IVIM-DKI parameters are calculated, which is displayed on app and saved as .txt file for ROI provided.
    
-   - ivimDKItvtool app tab: Input Data and Analysis display
+    - ivimDKItvtool app tab: Input Data and Analysis display
       ![image](https://user-images.githubusercontent.com/66351266/119849766-883a8400-bf2a-11eb-9fe9-2add9eebb8ac.png)
 
-   - ivimDKItvtool app tab: Output display
+    - ivimDKItvtool app tab: Output display
       ![image](https://user-images.githubusercontent.com/66351266/119849888-a6a07f80-bf2a-11eb-9c15-d86982acd92a.png)
 
 
@@ -74,6 +74,8 @@ Disclaimer: This project can be used only for research purposes. Authors are not
   
    -'[im2Y.m](https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting)': Transforms functional image data (4D or 3D array) into data matrix VxM where V is the number of voxels and M is number of b-values. Adapted function from https://www.mathworks.com/matlabcentral/fileexchange/65579-ivim-model-fitting.
   
+   - parsave_tv: For saving parfor function variables.
+   
    -'stats_roi.m': Calculates mean and standard deviation of IVIM-DKI parameters for ROI specified.
         
         -----------------------------------------------------------------------------
@@ -90,7 +92,7 @@ Disclaimer: This project can be used only for research purposes. Authors are not
         std_roi = Standard deviation of IVIM-DKI parameters for ROI specified and 
                    are saved as struct in the order D, D*, f, and k
   
-  - parsave_tv: For saving parfor function variables.
+  
 
   -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1] and [2](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
 
