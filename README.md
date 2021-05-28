@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------
 
 A package providing MATLAB programming tools and GUI for IVIM-DKI analysis with total
-variation (TV) penalty function for prostate cancer and benign benign prostatic hyperplasia (BPH).
+variation (TV) penalty function for prostate cancer and benign prostatic hyperplasia (BPH).
 
 ---------------------------------------------------------------------------------
 **REFERENCES:** 
