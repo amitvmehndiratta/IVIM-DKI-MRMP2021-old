@@ -94,11 +94,11 @@ Disclaimer: This project can be used only for research purposes. Authors are not
   
   
 
-  -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1] and [2](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
+  -'tv3d.m': Function which calculates 3D TV penalty. Please see ref. [1](https://link.springer.com/article/10.1007/s10334-021-00932-1) and [2](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.12520) for more details on the implementation of TV function.
 
 
 If you use toolbox or functions in research, please cite:
 
-Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
+[Malagi, A. V. et al. (2021). IVIM-DKI differentiation between prostate cancer and benign prostatic hyperplasia: comparison of 1.5T vs. 3T MRI. 
 Magnetic Resonance Materials in Physics, Biology and Medicine.
-DOI : 10.1007/s10334-021-00932-1
+DOI: 10.1007/s10334-021-00932-1](https://link.springer.com/article/10.1007/s10334-021-00932-1)
